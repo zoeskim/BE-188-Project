@@ -1,0 +1,14 @@
+﻿Cell line,Treatment,Viability,AXL expression,MHC-I expression,PD-L1 expression
+PC9,Untreated,7137.083333,527,117,82.8
+PC9,Erl,1720,389,122,43.6
+PC9,R428,54292,383,78.3,46.1
+PC9,Erl/R428,,404,71.2,48.7
+PC9,Erl+HGF,4214.333333,410,83.2,45
+PC9,Erl+FGF,4323,409,82,57.6
+PC9,Erl+IGF,2331.5,406,86.8,48.2
+PC9 AXL KO,Erl,,90.6,91.4,36.6
+PC9 AXL KO,R428,,55.6,79.3,40.6
+PC9 AXL KO,Erl/R428,,49.9,83.9,39.2
+,,,,,
+,,,,,
+Missing data,,,,,
