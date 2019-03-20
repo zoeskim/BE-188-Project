@@ -1,5 +1,8 @@
+""" Adapted from code by Adam Weiner: https://github.com/adamcweiner/flu-vax/blob/master/fluv/distance_calculation.py
+"""
+
 from sequence_processing import trim
-from sub_matrix import SubstitutionMatrix, PAM250, FLU_sub
+from sub_matrix import SubstitutionMatrix, PAM250
 import numpy as np
 from sklearn import manifold
 from sklearn.decomposition import PCA
@@ -11,8 +14,6 @@ class Distance:
         self.subMat = subMat
         if subMat is "PAM250":
             self.M = PAM250()
-        elif subMat is "FLU":
-            self.M = FLU_sub()
         self.numSeq = self.sequences.shape[0]
 
         
@@ -27,9 +28,7 @@ class Distance:
                 if self.subMat is "PAM250": # convert log-scaled PAM250 values to true values
                     temp_dist = np.exp(temp_dist)
                 dist[ii] = 1 / temp_dist # large distances have small values in matrices
-            avg_dist = np.sum(dist) / 317.0
-
-            return avg_dist
+            return np.sum(dist)
    
     def test_mat(self):
         """ function is the same as "dist_mat()" except that it only looks at first 10 sequences
